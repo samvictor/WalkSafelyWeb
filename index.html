@@ -1,8 +1,14 @@
 <html>
   <head>
+    <style>
+      video {
+        -webkit-filter: brightness(50%);
+        filter: brightness(50%);
+      }
+    </style>
   </head>
   <body>
-     <video width="320" height="240">
+     <video height="100%">
       Your browser does not support the video tag.
     </video>
   </body>
@@ -13,7 +19,6 @@
 
     if (navigator.getUserMedia) {
        navigator.getUserMedia({ audio: false, video: {
-                                                  width: 1280, height: 720,
                                                   facingMode: 'environment' }},
           function(stream) {
              var video = document.querySelector('video');
